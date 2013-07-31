@@ -1,23 +1,54 @@
 class Dessert
   def initialize(name, calories)
-    # YOUR CODE HERE
+    @name, @calories = name, calories
+  end
+
+  def getName
+    @name
+  end
+
+  def getCalories
+    @calories
+  end
+
+  def setName = (name)
+    @name = name
+  end
+
+  def setCalories = (value)
+    @calories = value
   end
   
   def healthy?
-    # YOUR CODE HERE
+    if @calories < 200
+	return true
+    end
+    false
   end
   
   def delicious?
-    # YOUR CODE HERE
+    true
   end
 end
 
 class JellyBean < Dessert
   def initialize(name, calories, flavor)
-    # YOUR CODE HERE
+    @name, @calories, @flavor = name, calories, flavor
   end
   
-  def delicious?
-    # YOUR CODE HERE
+  def setFlavor = (flavor)
+    @flavor = flavor
   end
+
+  def getFlavor
+    @flavor
+  end
+
+  def delicious?
+    if flavor == 'black licorice'
+      return false
+    end
+    true
+  end
+
 end
