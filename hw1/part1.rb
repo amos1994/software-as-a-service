@@ -4,11 +4,27 @@
 
 
 def palindrome?(str)
-  # YOUR CODE HERE
+  original_compare = str.downcase.gsub(/\s/,'').gsub(/\W/,'')
+  compare = str.downcase.gsub(/\s/,'').gsub(/\W/,'').reverse
+  if compare == original_compare
+	return true
+  end
+  return false
 end
 
 def count_words(str)
-  # YOUR CODE HERE
+  words = {}
+  str_list = str.split(/\b/)
+  str_list.each do |word|
+        word.downcase!
+	if word == " "
+	elsif  words[word]
+		words[word] += 1
+	else
+		words[word] = 1
+	end
+  end
+  return words
 end
 
 
